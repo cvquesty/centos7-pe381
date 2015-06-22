@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Define the Puppet Enterprise Version
-  pe_version = '3.8.0'
+  pe_version = '3.8.1'
   config.pe_build.version       = pe_version
   config.pe_build.download_root	= "https://s3.amazonaws.com/pe-builds/released/#{pe_version}"
 
