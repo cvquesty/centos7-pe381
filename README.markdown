@@ -3,7 +3,7 @@ This repo holds a stock vagrant implementation for use in consulting engagements
 In the rollup, I have:
 
 CentOS Linux 7<br>
-Puppet Master with Puppet Enterprise 3.8.0<br>
+Puppet Master with Puppet Enterprise 3.8.1<br>
 Puppet Agents 1-3, all customized to the following three environments:<br>
 - development<br>
 - testing<br>
@@ -29,7 +29,7 @@ word, and cannot be used as an environment name.  So, you should refrain from us
 environment.  I plan on removing it in future versions of this module, I just have to do 
 development in-between professional services engagements.
 
-With the default installaiton of PE 3.8.0, r10k now comes installed by default.  Old steps taken
+With the default installaiton of PE 3.8.1, r10k now comes installed by default.  Old steps taken
 to remediate the production directory and do an initial r10k run are no longer necessary. 
 
 Linux testing is now complete.  After a professional services engagement recently, I had a 
