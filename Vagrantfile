@@ -26,7 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Configure Master VM Settings
   master.vm.provider :virtualbox do |settings|
     settings.memory = 4096
-    settings.name = "c7master_3.8.0"
+    settings.name = "c7master_3.8.1"
     settings.cpus = 2
   end
 
@@ -56,7 +56,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Configure Development VM Settings
   development.vm.provider :virtualbox do |settings|
     settings.memory = 512
-    settings.name = "c7development_3.8.0"
+    settings.name = "c7development_3.8.1"
     settings.cpus = 1
   end
 
@@ -87,7 +87,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Configure Testing VM Settings
   testing.vm.provider :virtualbox do |settings|
     settings.memory = 512
-    settings.name = "c7testing_3.8.0"
+    settings.name = "c7testing_3.8.1"
     settings.cpus = 1
   end
 
@@ -118,7 +118,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Configure Production VM Settings
   production.vm.provider :virtualbox do |settings|
     settings.memory = 512
-    settings.name = "c7production_3.8.0"
+    settings.name = "c7production_3.8.1"
     settings.cpus = 1
   end
 
