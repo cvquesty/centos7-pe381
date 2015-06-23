@@ -7,8 +7,8 @@ export PATH=$PATH:/opt/puppet/bin
 /opt/puppet/bin/puppet module install 'zack-r10k'
 
 # Stop and disable Firewalld
-/bin/systemctl stop  firewalld.service
-/bin/systemctl disable firewlld.service
+/bin/systemctl stop  firewalld
+/bin/systemctl disable firewalld
 
 # Place the r10k configuration file
 cat > /var/tmp/configure_r10k.pp << 'EOF'
