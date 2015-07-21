@@ -13,7 +13,7 @@ export PATH=$PATH:/opt/puppet/bin
 # Place the r10k configuration file
 cat > /var/tmp/configure_r10k.pp << 'EOF'
 class { 'r10k':
-  version           => '1.5.1',
+  version           => '2.0.2',
   sources           => {
     'puppet' => {
       'remote'  => 'https://github.com/cvquesty/puppet_repository.git',
@@ -21,7 +21,6 @@ class { 'r10k':
       'prefix'  => false,
     }
   },
-  purgedirs         => ["${::settings::confdir}/environments"],
   manage_modulepath => false,
 }
 EOF
@@ -69,6 +68,12 @@ EOF
 
 # Then configure directory environments
 /opt/puppet/bin/puppet apply /var/tmp/configure_directory_environments.pp
+
+# And add the purgedirs setting to r10k
+cat >> /etc/r10k.yaml << 'EOF'
+:purgedirs:
+  - /etc/puppetlabs/puppet/environments
+EOF
 
 # Do the first deployment run
 /opt/puppet/bin/r10k deploy environment -pv
